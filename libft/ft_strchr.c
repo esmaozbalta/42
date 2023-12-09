@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/09 15:42:41 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/09 16:07:09 by esozbalt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	//c += 48;
+	int i;
+
+	i = 0;
+	while ((char)c != s[i])
+	{
+		if (s[i] == '\0')
+			return (0);
+		i++;
+	}
+	return ((char *)(s + i));
+}
+int main(void)
+{
+    const char cdizi[] = "Bilgisayar";
+    int cd = 'i';
+    char *ret = ft_strchr(cdizi, cd);
+
+    printf("Bulunan %d karakterinden itibaren dizi içeriği: %s", cd, ret);
+
+    return 0;
+}
