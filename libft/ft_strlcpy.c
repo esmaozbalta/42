@@ -26,13 +26,23 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		}
 		dest[i] = '\0';
 	}
-	return (ft_strlen(src));
+	
+	i = 0;
+	while (src[i])
+		i++;
+	return (i);
+	//return (ft_strlen(src));
 }
+/*
 int main() 
 {
-   char *s1[] = "Hello world!";
-   char *s2[] = "Welcome";
-   printf("%d", ft_strlcpy(s1, s2, 6));
+   char s2[] = "Hello world!";
+   char s1[50];
+   int copy = 5;
 
-   return 0;
+   size_t size = ft_strlcpy(s1, s2, copy);
+   printf("%zu, %d, %s, %s", size, (copy-1), s1, s2);
+
+   return (0);
 }
+*/
