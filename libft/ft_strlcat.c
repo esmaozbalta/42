@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/17 14:51:17 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 14:51:20 by esozbalt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -28,7 +39,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	return (i + ft_strlen(src));
 }
-
+/*
 int				main(void)
 {
 	char			dest[50] = "sefsfesa";
@@ -41,7 +52,7 @@ int				main(void)
 	printf("dest: %s\nsrc: %s\n", dest, src);
 }
 
-/*
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t s;

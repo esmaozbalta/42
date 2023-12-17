@@ -1,26 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 14:46:59 by esozbalt          #+#    #+#             */
-/*   Updated: 2023/12/17 14:47:05 by esozbalt         ###   ########.fr       */
+/*   Created: 2023/12/17 18:16:17 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 18:16:18 by esozbalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
-}
-/*
-int main( void )
-{
-    char b[] = "ornek";
-	printf("%s\n", b);
-    ft_bzero( b, sizeof(b));
-	printf("%s sonrasi", b);
-}*/

@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/17 14:48:27 by esozbalt          #+#    #+#             */
-/*   Updated: 2023/12/17 14:48:31 by esozbalt         ###   ########.fr       */
+/*   Created: 2023/12/17 17:34:33 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 17:34:34 by esozbalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	char	*d; //unsigned?
-	char	*s;
+	int	len;
+	char *new;
 
-	i = 0;
-	d = (char *)dst;
-	s = (char *)src;
-	while (i < n)
+	if (!s1 || !set)
 	{
-		d[i] = s[i];
-		i++;
+		return (NULL);
 	}
-	return (dst);
+	while (*s1 && ft_strchr(set, *s1))
+	{
+		s1++;
+	}
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len]))
+	{
+		len--;
+	}
+	return (ft_substr(s1, 0, len + 1));
 }
 
-int main(void)
+int main()
 {
-    const char *cp = "Bilgisayar&Programlama";
-    char dest[40];
+	char const s1[] = "MerhabaDunya";
+	char const s2[] = "Dun";
 
-    //memset(dest, '\0', 40);
-    ft_memcpy(dest, cp, 40);
-    printf("%s\n", dest);
-
-    return 0;
+	printf("%s", ft_strtrim(s1, s2));
 }

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/17 14:47:59 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 14:48:02 by esozbalt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -5,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*str;
 	char	chr;
-	int	i;
+	int		i;
 
 	str = (char *)s;
 	chr = (char)c;
@@ -21,6 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
 int main () {
    const char str[] = "merhaabalar";
    const char ch = 'b';
@@ -32,3 +44,4 @@ int main () {
 
    return(0);
 }
+*/

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 15:42:41 by esozbalt          #+#    #+#             */
-/*   Updated: 2023/12/09 16:07:09 by esozbalt         ###   ########.fr       */
+/*   Created: 2023/12/17 14:50:15 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 14:50:19 by esozbalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)(s + i));
 }
+/*
 int main(void)
 {
     const char cdizi[] = "Bilgisayar";
@@ -35,4 +36,4 @@ int main(void)
     printf("Bulunan %d karakterinden itibaren dizi içeriği: %s", cd, ret);
 
     return 0;
-}
+}*/

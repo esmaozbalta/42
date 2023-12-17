@@ -1,31 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esozbalt <esozbalt@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/17 14:47:31 by esozbalt          #+#    #+#             */
+/*   Updated: 2023/12/17 14:47:36 by esozbalt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libft.h" //?
+#include "libft.h" 
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*p; //istedigi veri tipine donusturulebilir
+	void	*p;
 
-	p = malloc(count * size); //bellekte yer ayirir //count adet size ise byte
-	if (!p) //eger yer ayrilmazsa null dondurur
+	p = malloc(count * size);
+	if (!p)
 	{
 		return (NULL);
 	}
-	ft_bzero(p, (count * size)); //ayrilan yer 0 ile doldurulur
+	ft_bzero(p, (count * size));
 	return (p);
 }
+/*
 int main(void)
 {
     int *ip;
 
-    ip = (int *)calloc(2, sizeof(int)); //int turunun byte boyutu
-
-	*ip = 5;
+    ip = ft_calloc(2, sizeof(int)); //int turunun byte boyutu
+	//*ip = 5;
+	
 	printf("%p adresindeki değer: %d\n", ip, *ip);
-	printf("%p adresindeki değer: %d\n", ip+1, *ip+1);
+	//printf("%p adresindeki değer: %d\n", ip+1, *ip+1);
     free(ip);
 }
 
-/*
+//bellekte yer ayirir count adet size ise byte-19
+
 int main(void)
 {
     int *ip, id;
