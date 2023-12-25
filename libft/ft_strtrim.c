@@ -77,8 +77,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 */
 int main()
 {
-	char const s1[] = "DunMerhabaDunyaDunDun";
-	char const s2[] = "Dun";
+	char const s1[] = "cemrmcce";
+	char const s2[] = "cemmm";
 	char *new;
 
 	new = ft_strtrim(s1, s2);

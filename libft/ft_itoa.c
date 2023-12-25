@@ -25,7 +25,7 @@ unsigned int	ft_number_size(int n)
 	{
 		n = n / 10;
 		len++;
-	}
+	}                          
 	return (len);
 }
 
