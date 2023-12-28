@@ -37,23 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-int				main(void)
-{
-	char			dest[50] = "sefsfesa";
-	char			src[50] = "fsf";
-	unsigned int	size;
-
-	size = 11;
-	printf("%s\n", ft_strnstr(dest, src, size));
-//	printf("%d\n", ft_strlcat(dest, src, size));
-	printf("dest: %s\nsrc: %s\n", dest, src);
-/*
-    const char *largestring = "Foo Bar Baz";
-    const char *smallstring = "Ba";
-    char *ptr;
-
-    ptr = strnstr(largestring, smallstring, 15);
-	printf("%s", ptr);
-*/   
-}

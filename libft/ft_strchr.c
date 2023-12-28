@@ -14,8 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	//c += 48;
-	int i;
+	int	i;
 
 	i = 0;
 	while ((char)c != s[i])
@@ -26,14 +25,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)(s + i));
 }
-/*
-int main(void)
-{
-    const char cdizi[] = "Bilgisayar";
-    int cd = 'i';
-    char *ret = ft_strchr(cdizi, cd);
-
-    printf("Bulunan %d karakterinden itibaren dizi içeriği: %s", cd, ret);
-
-    return 0;
-}*/

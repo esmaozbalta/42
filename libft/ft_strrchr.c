@@ -31,15 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-int main(void)
-{
-    const char cdizi[] = "Bilgisayar";
-    int cd = 'i';
-    char *ret = ft_strrchr(cdizi, cd);
-
-    printf("Bulunan son %d karakterinden itibaren dizi içeriği: %s", cd, ret);
-
-    return 0;
-}
-

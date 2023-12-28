@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*str1;//unsigned?
+	char	*str1;
 	char	*str2;
-	int		i;
+	size_t	i;
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
@@ -25,33 +25,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (str1[i] != str2[i])
 		{
-			return (str1[i] - str2[i]);
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		}
 		i++;
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-    const char *cp1 = "Bilgi";
-    const char *cp2 = "Bilgileri";
-    int ret;
-
-    ret = ft_memcmp(cp1, cp2, 10);
-
-    if(ret<0) 
-	{
-		printf("cp1 bellek içeriği cp2 bellek içeriğinden küçüktür!");
-	}
-    else if(ret>0)
-	{
-		printf("cp2 bellek içeriği cp1 bellek içeriğinden küçüktür!");
-	}
-	else
-	{
-		printf("cp1 bellek içeriği cp2 bellek içeriğine eşittir!");
-	}
-    return 0;
-}
-*/

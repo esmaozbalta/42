@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	len;
-	int	len2;
-	char *dst;
+	int		len;
+	int		len2;
+	char	*dst;
 
 	len = ft_strlen(s1);
 	len2 = ft_strlen(s2);
@@ -28,11 +28,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(dst, s1, len + 1);
 	ft_strlcat(dst, s2, (len + len2 + 1));
 	return (dst);
-}
-int main()
-{
-	char const s1[] = "merhaba";
-	char const s2[] = "dunya";
-
-	printf("%s", ft_strjoin(s1, s2));
 }

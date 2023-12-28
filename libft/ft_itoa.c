@@ -25,7 +25,7 @@ unsigned int	ft_number_size(int n)
 	{
 		n = n / 10;
 		len++;
-	}                          
+	}
 	return (len);
 }
 
@@ -56,14 +56,4 @@ char	*ft_itoa(int n)
 		len--;
 	}
 	return (str);
-}
-
-int	main()
-{
-    int a = -4534530;
-	char *new;
-
-    new = ft_itoa(a);
-	printf("%s", new);
-    return 0;
 }

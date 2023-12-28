@@ -12,7 +12,32 @@
 
 #include "libft.h"
 
-int	charcheck(char c, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+
+	if (!s1 || !set)
+		return (0);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
+		i--;
+	return (ft_substr(s1, 0, i + 1));
+}
+/*
+int main()
+{
+	char const s1[] = "alarmla";
+	char const s2[] = "la";
+	char *new;
+
+	new = ft_strtrim(s1, s2);
+	printf("%s", new);
+}
+
+
+int	ft_charcheck(char c, char const *set)
 {
 	int	i;
 
@@ -33,13 +58,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
-	while (s1[start] && charcheck(s1[start], set))
+	while (s1[start] && ft_charcheck(s1[start], set))
 		start++;
 	end = ft_strlen(s1) - 1;
-	while (end > start && charcheck(s1[end], set))
+	while (end > start && ft_charcheck(s1[end], set))
 		end--;
-	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -52,35 +79,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
-
-/*
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int	len;
-	char *new;
-
-	if (!s1 || !set)
-	{
-		return (NULL);
-	}
-	while (*s1 && ft_strchr(set, *s1))
-	{
-		s1++;
-	}
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-	{
-		len--;
-	}
-	return (ft_substr(s1, 0, len + 1));
-}
 */
-int main()
-{
-	char const s1[] = "cemrmcce";
-	char const s2[] = "cemmm";
-	char *new;
-
-	new = ft_strtrim(s1, s2);
-	printf("%s", new);
-}

@@ -38,10 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/*
-int	main(void)
-{
-	char s[55] = "  	-7b67";
-	printf("%d\n", ft_atoi(s));
-	printf("%d", atoi(s));
-}*/

@@ -16,11 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-/*
-int main( void )
-{
-    char b[] = "ornek";
-	printf("%s\n", b);
-    ft_bzero( b, sizeof(b));
-	printf("%s sonrasi", b);
-}*/
