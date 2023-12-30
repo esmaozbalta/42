@@ -23,11 +23,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*str == chr)
+		if (str[i] == chr)
 		{
-			return (str);
+			return (str + i);
 		}
-		str++;
 		i++;
 	}
 	return (NULL);

@@ -17,10 +17,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	slen;
 
-	if (!s)
-	{
-		return (NULL);
-	}
 	slen = ft_strlen(s);
 	if (slen < start)
 	{
@@ -31,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		len = slen;
 	}
-	substr = (char *)malloc (sizeof(char) * len + 1);
+	substr = (char *)malloc((len + 1));
 	if (!substr)
 	{
 		return (NULL);

@@ -20,7 +20,7 @@ unsigned int	ft_number_size(int n)
 	if (n == 0)
 		return (1);
 	if (n < 0)
-		len = len + 1;
+		len++;
 	while (n != 0)
 	{
 		n = n / 10;
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	unsigned int	len;
 
 	len = ft_number_size(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
 	if (n < 0)
