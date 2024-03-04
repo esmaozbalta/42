@@ -102,3 +102,72 @@ char	*get_next_line(int fd)
 	buffer = ft_newline(buffer);
 	return (line);
 }
+//sondan 1 onceki
+#include <fcntl.h>
+#include <stdio.h>
+/*
+int main()
+{
+	char *line[10];
+	int len = 0;
+	int count = 0;	
+	int fd = open("a.txt", O_CREAT | O_RDWR, 777);
+
+	while((line[len] = get_next_line(fd)) != NULL) //dosyadaki satir sayisini len de tutar
+	{
+		len++;
+		//free(line); // ust uste malloc acmaya calisirsa leaks olur
+	}
+	len--;
+	printf("%s", line[len - 1]);
+	/*
+	close(fd); //kapatir ve dosya basa sarar
+	fd = open("a.txt", O_CREAT | O_RDWR, 777);
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		count++;
+		if (count == (len - 1)) //sondan onceki olunca yazdirir
+			printf("%s", line);
+		free(line);
+	}*/
+	//system("leaks a.out");
+}
+/*
+int main()
+{
+	char *line;
+	int fd = open("b.txt", O_CREAT | O_RDWR, 777);
+	int fd1 = open("c.txt", O_CREAT | O_RDWR, 777);
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("%s", line);
+		free(line);
+	}
+	printf("\n");
+	while ((line = get_next_line(fd1)) != NULL)
+	{
+		printf("%s", line);
+		free(line);
+	}
+	system("leaks a.out");
+}
+int main()
+{
+ 	int fd;
+ 	fd=open("ilkkus.txt",O_CREAT | O_RDWR, 777);
+ 	int i=0;
+	char *str[10];
+ 	str[i]=get_next_line(fd);
+ 	while(str[i])
+ 	{
+ 		i++;
+ 		str[i]=get_next_line(fd);
+ 	}
+ 	while (--i>=0)
+ 	{
+ 		printf("%s",str[i]);
+		if (i != 0)
+			printf("\n");
+ 	}
+}
+*/

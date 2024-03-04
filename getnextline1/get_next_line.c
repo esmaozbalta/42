@@ -30,7 +30,7 @@ char	*ft_read(int fd, char *buffer)
 			free(buffer);
 			return (0);
 		}
-		str[bytes_read] = '\0'; //sona null
+		str[bytes_read] = '\0'; //sona null 
 		buffer = ft_strjoin(buffer, str); //str yi buffer a atar;
 	}
 	free(str);
@@ -108,9 +108,14 @@ char	*get_next_line(int fd)
 #include <fcntl.h>
 int main()
 {
+	char *str;
+	int bytes_read;
 	int fd = open("a.txt", O_CREAT | O_RDWR, 0644);
-	char *b = get_next_line(fd);
-	char *c = get_next_line(fd);
-	printf("%s%s", b, c);
+	//char *b = get_next_line(fd);
+	//char *c = get_next_line(fd);
+	str = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	bytes_read = read(fd, str, BUFFER_SIZE);
+	printf("%d", bytes_read);
+	printf("%s", str);
 	//system("leaks a.out");
 }
